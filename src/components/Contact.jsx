@@ -53,7 +53,7 @@ export default function Contact() {
 
   return (
     <div className="" id="contact">
-      <p className="line text-3xl text-black">Contact Me</p>
+      <p className="line text-3xl text-black font-ubuntu">Contact Me</p>
 
       <div className="flex md:flex-row flex-col justify-center xl:px-28 sm:px-10 px-4 py-10 gap-y-3 gap-x-14">
         <a

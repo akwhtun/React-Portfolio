@@ -58,3 +58,14 @@ body {
     width: 100%; 
   }
 }
+
+.skill::after {
+  content : "";
+  width:150px;
+  height: 3px;
+  background-color: snow;
+  position: absolute;
+  left:50%;
+  bottom:0;
+  transform: translateX(-50%);
+}

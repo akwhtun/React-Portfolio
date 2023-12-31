@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
-import { Link } from "react-scroll";
+import SkillsList from "./components/SkillsList";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -64,9 +64,10 @@ function App() {
         </div>
       </section>
 
+      <SkillsList/>
       <Contact />
 
-      {/* <section class="bg-white py-16">
+      <section class="bg-white py-16">
         <div class="container mx-auto">
           <h2 class="text-3xl font-bold mb-8 text-gray-800">Portfolio</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -100,7 +101,7 @@ function App() {
         </div>
       </section>
 
-     */}
+    
       <footer class="bg-gray-800 text-light-gray py-4 text-center">
         <p>&copy; 2023 Your Name. All Rights Reserved.</p>
       </footer>
