@@ -61,7 +61,7 @@ const Skill = ({ name, level, icon, color }) => {
       </div>
       <div className="p-6">
         <div className="flex justify-center items-center mb-4">
-          <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center">
+          <div className="w-20 h-20 bg-light-gray rounded-full flex items-center justify-center">
           {
             icon !== '' ? 
             <FontAwesomeIcon icon={icon} className={` ${color}`} />
@@ -70,15 +70,13 @@ const Skill = ({ name, level, icon, color }) => {
           }
           </div>
         </div>
-        <h3 className="text-lg font-semibold text-center mb-2">{name}</h3>
+        <h3 className="text-lg font-semibold text-center mb-2 text-light-gray text-opacity-90">{name}</h3>
       </div>
     </div>
   );
 };
 
 const SkillsList = () => {
-  <div>
-</div>
   const frontendSkills = [
     {
       name : 'HTML',
@@ -165,11 +163,11 @@ const SkillsList = () => {
 
   return (
     <div className="" id="skills">
-    <p className="line text-3xl text-black font-ubuntu">My Skills</p>
+    <p className="line text-3xl text-light-gray text-opacity-90 font-ubuntu">My Skills</p>
     <div className="grid grid-cols-1 gap-y-4 xl:px-28 sm:px-10 px-4 py-10">
     <div>
     <p className="text-2xl text-light-gray text-center font-ubuntu pt-3 skill relative">Front End Skills </p>
-    <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-3">
+    <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-4">
       {frontendSkills.map((skill, index) => (
         <Skill key={index} {...skill} />
       ))}
@@ -177,7 +175,7 @@ const SkillsList = () => {
     </div>
     <div>
     <p className="text-2xl text-light-gray text-center font-ubuntu pt-3 skill relative">Back End Skills </p>
-    <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-3">
+    <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-4">
       {backendSkills.map((skill, index) => (
         <Skill key={index} {...skill} />
       ))}

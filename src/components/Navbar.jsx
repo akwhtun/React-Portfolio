@@ -9,13 +9,13 @@ export default function Navbar() {
     setMobileMenu((pre) => !pre);
   };
   return (
-    <nav className="bg-gray-800 fixed top-0 left-0 w-screen" style={{zIndex:10000}}>
+    <nav className="bg-background-color fixed top-0 left-0 w-screen" style={{zIndex:10000}}>
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
               type="button"
-              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="relative inline-flex items-center justify-center rounded-md p-2 text-light-gray hover:bg-background-hover hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
               onClick={handleMobileMenu}
@@ -66,7 +66,7 @@ export default function Navbar() {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                  className="bg-btn-color hover:bg-btn-hover text-light-gray rounded-md px-3 py-2 text-sm font-medium"
                   aria-current="page"
                 >
                   Dashboard
@@ -76,7 +76,7 @@ export default function Navbar() {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  className="bg-btn-color hover:bg-btn-hover text-light-gray  rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Team
                 </ScrollLink>
@@ -85,7 +85,7 @@ export default function Navbar() {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  className="bg-btn-color hover:bg-btn-hover text-light-gray  rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Projects
                 </ScrollLink>
@@ -94,7 +94,7 @@ export default function Navbar() {
                    spy={true}
                    smooth={true}
                    duration={500}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  className="bg-btn-color hover:bg-btn-hover text-light-gray  rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Contact
                 </ScrollLink>
@@ -111,7 +111,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             duration={500}
-            className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+            className="bg-btn-color hover:bg-btn-hover text-light-gray  block rounded-md px-3 py-2 text-base font-medium"
             aria-current="page"
           >
             Dashboard
@@ -121,7 +121,7 @@ export default function Navbar() {
              spy={true}
              smooth={true}
              duration={500}
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            className="bg-btn-color hover:bg-btn-hover text-light-gray  block rounded-md px-3 py-2 text-base font-medium"
           >
             Team
           </ScrollLink>
@@ -130,7 +130,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             duration={500}
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            className="bg-btn-color hover:bg-btn-hover text-light-gray  block rounded-md px-3 py-2 text-base font-medium"
           >
             Projects
           </ScrollLink>
@@ -139,7 +139,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             duration={500}
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+            className="bg-btn-color hover:bg-btn-hover text-light-gray  block rounded-md px-3 py-2 text-base font-medium"
           >
             Contact
           </ScrollLink>

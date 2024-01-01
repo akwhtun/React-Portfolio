@@ -11,10 +11,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        'dark-grayish-blue': '#34495e',
-        'darker-grayish-blue': '#2c3e50',
-        'light-hover-gray': '#3d5266',
-        'light-gray': '#ecf0f1',
+        'background-color': '#282a36',
+        'background-hover': '#44475a',
+        'btn-color' : '#2a0a2d',
+        'btn-hover': '#371040',
+        'light-gray': '#f8f8f2',
       },
     }, // You can add theme customizations here
   },
