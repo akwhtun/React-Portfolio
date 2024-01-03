@@ -7,7 +7,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faMapMarker } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faTelegram } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -154,22 +154,22 @@ export default function Contact() {
       </form>
       <div className="line text-3xl text-black py-10">
         <a
-          href="https://"
+           href="https://www.facebook.com/profile.php?id=100087490458440&mibextid=JRoKGi"
           className="btn bg-btn-color hover:bg-btn-hover text-light-gray text-opacity-80 font-bold px-3 py-1 rounded-md shadow-lg"
         >
           <FontAwesomeIcon icon={faFacebook} className="icon-large" />
         </a>
         <a
-          href="https://"
+         href="https://github.com/akwhtun"
           className="btn bg-btn-color hover:bg-btn-hover text-light-gray text-opacity-80 font-bold px-3 py-1 rounded-md shadow-lg mx-2"
         >
           <FontAwesomeIcon icon={faGithub} className="icon-large" />
         </a>
         <a
-          href="https://"
+          href="##"
           className="btn bg-btn-color hover:bg-btn-hover text-light-gray text-opacity-80 font-bold px-3 py-1 rounded-md shadow-lg"
         >
-          <FontAwesomeIcon icon={faTelegram} className="icon-large" />
+          <FontAwesomeIcon icon={faInstagram} className="icon-large" />
         </a>
       </div>
       <div className="flex justify-center pb-2">

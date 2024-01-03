@@ -55,7 +55,7 @@ const Skill = ({ name, level, icon, color }) => {
       break;
   }
   return (
-    <div className={`rounded-lg shadow-lg overflow-hidden border ${getBorderColor()}`}>
+    <div className={`rounded-lg overflow-hidden border ${getBorderColor()} hover:shadow-2xl transition duration-300 ease-in-out transform hover:scale-105`}>
       <div className={`flex items-center justify-center ${getLevelColor()} text-xl font-semibold py-1`}>
         {level}
       </div>
