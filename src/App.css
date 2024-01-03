@@ -2,10 +2,31 @@
 @import './tailwind.css';
 
 /* Other global styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #282a36;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a0a2d;
+  border-radius: 6px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a0a2d #282a36;
+}
+
 body {
   background: linear-gradient(135deg, #282a36, #44475a, #401044, #1e1f29, #403b4f);
 }
 
+.active{
+  background-color: #2a0a2d;
+}
 .icon-large {
   font-size: 24px;
 }
@@ -71,3 +92,25 @@ body {
   bottom: 0;
   transform: translateX(-50%);
 }
+
+.button-e{
+  display: none;
+}
+
+.showButton {
+  display: inline;
+  z-index: 900;
+  animation: bounceUpDown 1.2s infinite;
+}
+
+
+@keyframes bounceUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-scroll";
 
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -8,8 +8,17 @@ export default function Navbar() {
   const handleMobileMenu = () => {
     setMobileMenu((pre) => !pre);
   };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const offsetValue = -63;
   return (
-    <nav className="bg-background-color fixed top-0 left-0 w-screen" style={{zIndex:10000}}>
+    <nav
+      className="bg-background-color fixed top-0 left-0 w-screen"
+      style={{ zIndex: 10000, height: '63' }}
+    >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -54,95 +63,121 @@ export default function Navbar() {
             </button>
           </div>
           <div className="flex flex-1 items-center justify-end sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center pr-5 text-light-gray font-ubuntu font-semibold text-2xl">
+            <div className="flex flex-shrink-0 items-center pr-5 text-light-gray font-poppins font-semibold text-2xl cursor-pointer" onClick={scrollToTop}>
               &lt;AKWH/&gt;
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-                <ScrollLink
-                 to="#"
+                <Link
+                  to="home"
                   spy={true}
                   smooth={true}
                   duration={500}
-                  className="bg-btn-color hover:bg-btn-hover text-light-gray rounded-md px-3 py-2 text-sm font-medium"
-                  aria-current="page"
+                  offset={offsetValue}
+                  className={`hover:bg-btn-hover cursor-pointer font-poppins text-light-gray rounded-md px-3 py-2 text-sm font-medium`}
                 >
-                  Dashboard
-                </ScrollLink>
-                <ScrollLink
-                 to="#"
+                  Home
+                </Link>
+                <Link
+                  to="about"
                   spy={true}
                   smooth={true}
                   duration={500}
-                  className="bg-btn-color hover:bg-btn-hover text-light-gray  rounded-md px-3 py-2 text-sm font-medium"
+                  offset={offsetValue}
+                  className={`hover:bg-btn-hover cursor-pointer font-poppins text-light-gray rounded-md px-3 py-2 text-sm font-medium `}
                 >
-                  Team
-                </ScrollLink>
-                <ScrollLink
-                 to="#"
+                  About
+                </Link>
+                <Link
+                  to="skills"
                   spy={true}
                   smooth={true}
                   duration={500}
-                  className="bg-btn-color hover:bg-btn-hover text-light-gray  rounded-md px-3 py-2 text-sm font-medium"
+                  offset={offsetValue}
+                  className={`hover:bg-btn-hover cursor-pointer font-poppins text-light-gray rounded-md px-3 py-2 text-sm font-medium `}
+                >
+                  Skills
+                </Link>
+                <Link
+                  to="projects"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={offsetValue}
+                  className={`hover:bg-btn-hover cursor-pointer font-poppins text-light-gray rounded-md px-3 py-2 text-sm font-medium`}
                 >
                   Projects
-                </ScrollLink>
-                <ScrollLink
-                   to="contact"
-                   spy={true}
-                   smooth={true}
-                   duration={500}
-                  className="bg-btn-color hover:bg-btn-hover text-light-gray  rounded-md px-3 py-2 text-sm font-medium"
+                </Link>
+                <Link
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={offsetValue}
+                  className={`hover:bg-btn-hover cursor-pointer font-poppins text-light-gray rounded-md px-3 py-2 text-sm font-medium`}
                 >
                   Contact
-                </ScrollLink>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className={`sm:hidden ${mobileMenu ? "" : "hidden"}`}>
-        <div className="space-y-1 px-2 pb-3 pt-2">
-          <ScrollLink
-            to="#"
+      <div className={`sm:hidden ${mobileMenu ? "" : "hidden"}`} style={{height:'63px'}}>
+        <div className="space-y-1 px-2 pb-3 pt-2 bg-background-color">
+          <Link
+            to="home"
             spy={true}
             smooth={true}
             duration={500}
-            className="bg-btn-color hover:bg-btn-hover text-light-gray  block rounded-md px-3 py-2 text-base font-medium"
-            aria-current="page"
+            offset={offsetValue}
+            className={` hover:bg-btn-hover cursor-pointer font-poppins text-light-gray  block rounded-md px-3 py-2 text-base font-medium`}
           >
-            Dashboard
-          </ScrollLink>
-          <ScrollLink
-             to="#"
-             spy={true}
-             smooth={true}
-             duration={500}
-            className="bg-btn-color hover:bg-btn-hover text-light-gray  block rounded-md px-3 py-2 text-base font-medium"
-          >
-            Team
-          </ScrollLink>
-          <ScrollLink
-            to="#"
+            Home
+          </Link>
+          <Link
+            to="about"
             spy={true}
             smooth={true}
             duration={500}
-            className="bg-btn-color hover:bg-btn-hover text-light-gray  block rounded-md px-3 py-2 text-base font-medium"
+            offset={offsetValue}
+            className={` hover:bg-btn-hover cursor-pointer font-poppins text-light-gray  block rounded-md px-3 py-2 text-base font-medium`}
+          >
+            About
+          </Link>
+          <Link
+            to="skills"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={offsetValue}
+            className={` hover:bg-btn-hover cursor-pointer font-poppins text-light-gray  block rounded-md px-3 py-2 text-base font-medium`}
+          >
+            Skills
+          </Link>
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={offsetValue}
+            className={` hover:bg-btn-hover cursor-pointer font-poppins text-light-gray  block rounded-md px-3 py-2 text-base font-medium`}
           >
             Projects
-          </ScrollLink>
-          <ScrollLink
-            to="#"
+          </Link>
+          <Link
+            to="contact"
             spy={true}
             smooth={true}
             duration={500}
-            className="bg-btn-color hover:bg-btn-hover text-light-gray  block rounded-md px-3 py-2 text-base font-medium"
+            offset={offsetValue}
+            className={` hover:bg-btn-hover cursor-pointer font-poppins text-light-gray  block rounded-md px-3 py-2 text-base font-medium`}
           >
             Contact
-          </ScrollLink>
+          </Link>
         </div>
       </div>
     </nav>

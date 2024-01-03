@@ -6,18 +6,15 @@ const Project = ({title, description, languages, githubLink, liveDemoLink}) => {
   return (
     <div className="bg-background-color rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:shadow-xl">
       <div className="p-6">
-        {/* Project Title */}
         <h3 className="text-2xl font-bold mb-4 text-light-gray text-opacity-90">{title}</h3>
         
-        {/* Project Description */}
-        <p className="text-light-gray text-opacity-95 leading-relaxed lg:h-32 md:h-24 h-32 mb-4">{description}</p>
+        <p className="text-light-gray text-opacity-90 leading-relaxed lg:h-32 md:h-24 h-32 mb-4">{description}</p>
         
-        {/* Languages Used */}
         <div className="flex flex-wrap mb-4">
           {languages.map((language, index) => (
             <span
               key={index}
-              className="bg-btn-color hover:bg-btn-hover text-light-gray text-opacity-90 text-xs font-semibold mr-2 mb-2 py-2 px-3 rounded"
+              className="bg-btn-color hover:bg-btn-hover text-light-gray text-opacity-90 text-sm font-semibold mr-2 mb-2 py-2 px-3 rounded"
             >
               {language}
             </span>
@@ -25,9 +22,7 @@ const Project = ({title, description, languages, githubLink, liveDemoLink}) => {
         </div>
         
 
-        {/* Project Links */}
         <div className="flex justify-between items-center">
-          {/* GitHub Link */}
           <a
             href={githubLink}
             target="_blank"
@@ -38,7 +33,6 @@ const Project = ({title, description, languages, githubLink, liveDemoLink}) => {
             GitHub
           </a>
           
-          {/* Live Demo Link */}
           {liveDemoLink && (
             <a
               href={liveDemoLink}
@@ -104,14 +98,14 @@ const ProjectsList = () => {
     {
       title: 'POS Web App',
       description: 'This web application is a responsive POS (Point of Sale) online website. The system is designed to support both admin and user functionalities.',
-      languages: ['Bootstrap', 'JQuery', 'Laravel', 'PHP'],
+      languages: ['Bootstrap', 'JQuery', 'Laravel', 'MySQL'],
       githubLink: 'https://github.com/yourusername/project2',
       liveDemoLink: 'https://www.yourproject2demo.com',
     },
     {
       title: 'EBook Web App',
       description: 'This Online EBook Store provides a responsive interface for exploring and downloading books.The system is designed to support both admin and user functionalities.',
-      languages: ['Bootstrap', 'JQuery', 'Laravel', 'PHP'],
+      languages: ['Bootstrap', 'JQuery', 'Laravel', 'MySQL'],
       githubLink: 'https://github.com/yourusername/project2',
       liveDemoLink: 'https://www.yourproject2demo.com',
     },
@@ -125,7 +119,7 @@ const ProjectsList = () => {
   ];
 
   return (
-    <div className="" id="projects">
+    <div id="projects">
     <p className="line text-3xl text-light-gray text-opacity-90 font-ubuntu">My Projects</p>
     <div className="grid grid-cols-1 gap-y-4 xl:px-28 sm:px-10 px-4 py-10">
       <div className="grid gap-6 lg:grid-cols-2 grid-col-1">

@@ -52,7 +52,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="" id="contact">
+    <div id="contact">
       <p className="line text-3xl text-light-gray text-opacity-90 font-ubuntu">Contact Me</p>
 
       <div className="flex md:flex-row flex-col justify-center xl:px-28 sm:px-10 px-4 py-10 gap-y-3 gap-x-14">
@@ -85,7 +85,7 @@ export default function Contact() {
           className="bg-btn-color mb-2 rounded relative"
           role="alert"
         >
-          <span ref={msgRef} className="px-4 py-2 block font-bold border-btn-hoverbg-btn-hover text-light-gray text-opacity-80">
+          <span ref={msgRef} className="px-4 py-2 block font-bold border-btn-hover text-light-gray text-opacity-80">
             
           </span>
         </div>
@@ -103,7 +103,7 @@ export default function Contact() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Your name"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-btn-hoverbg-btn-hover"
+            className="w-full bg-btn-color text-light-gray text-opacity-90 px-4 py-2 border border-btn-color rounded-md  focus:outline-none focus:border-background-color"
             required
           />
         </div>
@@ -121,7 +121,7 @@ export default function Contact() {
             value={formData.email}
             onChange={handleChange}
             placeholder="Your email"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-btn-hoverbg-btn-hover"
+            className="w-full bg-btn-color text-light-gray text-opacity-90 px-4 py-2 border border-btn-color rounded-md  focus:outline-none focus:border-background-color"
             required
           />
         </div>
@@ -139,7 +139,7 @@ export default function Contact() {
             onChange={handleChange}
             placeholder="Your message"
             rows="6"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-btn-hoverbg-btn-hover"
+            className="w-full bg-btn-color text-light-gray text-opacity-90 px-4 py-2 border border-btn-color rounded-md  focus:outline-none focus:border-background-color"
             required
           ></textarea>
         </div>
@@ -173,7 +173,7 @@ export default function Contact() {
         </a>
       </div>
       <div className="flex justify-center pb-2">
-        <p className="text-2xl text-background-color relative font-ubuntu scrolling">
+        <p className="text-2xl text-white text-opacity-0 relative font-ubuntu scrolling">
           Thanks for Scrolling.
         </p>
       </div>

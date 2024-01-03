@@ -3,9 +3,7 @@ module.exports = {
 
   theme: {
     fontFamily: {
-      sans: ['Roboto', 'sans-serif'],
-      'open-sans': ['Open Sans', 'sans-serif'], 
-      'montserrat': ['Montserrat', 'sans-serif'],
+      'poppins': ['Poppins', 'sans-serif'],
       'nunito': ['Nunito', 'sans-serif'],
       'ubuntu': ['Ubuntu', 'sans-serif'],
     },

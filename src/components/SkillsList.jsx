@@ -162,7 +162,7 @@ const SkillsList = () => {
   
 
   return (
-    <div className="" id="skills">
+    <div id="skills">
     <p className="line text-3xl text-light-gray text-opacity-90 font-ubuntu">My Skills</p>
     <div className="grid grid-cols-1 gap-y-4 xl:px-28 sm:px-10 px-4 py-10">
     <div>
