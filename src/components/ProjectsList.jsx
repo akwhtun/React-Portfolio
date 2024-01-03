@@ -8,7 +8,7 @@ const Project = ({title, description, languages, githubLink, liveDemoLink}) => {
       <div className="p-6">
         <h3 className="text-2xl font-bold mb-4 text-light-gray text-opacity-90">{title}</h3>
         
-        <p className="text-light-gray text-opacity-90 leading-relaxed lg:h-32 md:h-24 h-40 mb-4">{description}</p>
+        <p className="text-light-gray text-opacity-90 leading-relaxed lg:h-32 md:h-24 sm:h-36 h-48 mb-4">{description}</p>
         
         <div className="flex flex-wrap mb-4">
           {languages.map((language, index) => (
