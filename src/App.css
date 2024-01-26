@@ -20,13 +20,40 @@
   scrollbar-color: #2a0a2d #282a36;
 }
 
+
 body {
   background: linear-gradient(135deg, #282a36, #44475a, #401044, #1e1f29, #403b4f);
 }
 
-.active{
+.load {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #282a36;
+}
+
+#contact {
+  position: relative;
+}
+
+.contact-load {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #1e1f2977;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
   background-color: #2a0a2d;
 }
+
 .icon-large {
   font-size: 24px;
 }
@@ -93,7 +120,7 @@ body {
   transform: translateX(-50%);
 }
 
-.button-e{
+.button-e {
   display: none;
 }
 
@@ -105,12 +132,107 @@ body {
 
 
 @keyframes bounceUpDown {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
 }
 
+/* loading */
+.loader {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  perspective: 800px;
+}
 
+.inner {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.inner.one {
+  left: 0%;
+  top: 0%;
+  animation: rotate-one 1s linear infinite;
+  border-bottom: 3px solid #EFEFFA;
+}
+
+.inner.two {
+  right: 0%;
+  top: 0%;
+  animation: rotate-two 1s linear infinite;
+  border-right: 3px solid #EFEFFA;
+}
+
+.inner.three {
+  right: 0%;
+  bottom: 0%;
+  animation: rotate-three 1s linear infinite;
+  border-top: 3px solid #EFEFFA;
+}
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  font-weight: bolder;
+  font-family: poppins;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #0000;
+  background: linear-gradient(90deg, #EFEFFA calc(50% + 0.5ch), #000 0) right/calc(200% + 1ch) 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: l7 2s infinite steps(11);
+}
+
+.text-container:before {
+  content: "AKWH";
+}
+
+@keyframes l7 {
+  to {
+    background-position: left
+  }
+}

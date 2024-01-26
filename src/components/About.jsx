@@ -17,7 +17,7 @@ const ProfileComponent = () => {
           <div className="bg-btn-color hover:to-btn-hover rounded-lg shadow-lg p-6 text-light-gray text-opacity-80">
             <h3 className="text-2xl font-semibold mb-4">Relevant Experience</h3>
             <p className="text-lg leading-relaxed mb-4">
-              FullStack Web Developer - November 9, 2018 - Present
+              Web Developer - November 9, 2018 - Present
             </p>
             <p className="text-lg leading-relaxed">
               Throughout my journey, I've contributed to various projects, including e-commerce platforms, note-taking applications, and user authentication systems. My responsibilities encompass frontend and backend development, emphasizing website performance optimization, security enhancements, and responsive design implementation.

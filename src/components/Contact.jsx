@@ -8,12 +8,15 @@ import { faMapMarker } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import ClipLoader from "react-spinners/ClipLoader";
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const [loading, setLoading] = useState(false);
 
   const msgRef = useRef();
 
@@ -27,6 +30,7 @@ export default function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
     try {
       const response = await fetch("https://formspree.io/f/xeqyjnpb", {
         method: "POST",
@@ -48,6 +52,8 @@ export default function Contact() {
       }
     } catch (error) {
       msgRef.current.textContent = "Fail to sent. " + error;
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -178,6 +184,17 @@ export default function Contact() {
           Thanks for Scrolling.
         </p>
       </div>
+      {loading && (
+        <div className="contact-load">
+          <ClipLoader
+            color={"snow"}
+            loading={loading}
+            size={50}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </div>
+      )}
     </div>
   );
 }
