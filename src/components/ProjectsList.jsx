@@ -1,126 +1,117 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import amono from "../project-photos/amono.png";
+import crsfcu from "../project-photos/crsfcu.png";
+import niyama from "../project-photos/niyama.png";
+import ebook from "../project-photos/ebook.png";
+import blog from "../project-photos/blog.png";
+import order from "../project-photos/order.png";
 
-const Project = ({title, description, languages, githubLink, liveDemoLink}) => {
+
+// Redesigned Single Project Card
+const Project = ({ title, description, image, githubLink, liveDemoLink }) => {
   return (
-    <div className="bg-background-color rounded-lg shadow-lg overflow-hidden transform hover:shadow-2xl transition duration-300 ease-in-out hover:translate-y-[-2px] hover:translate-x-1">
-      <div className="p-6">
-        <h3 className="text-2xl font-bold mb-4 text-light-gray text-opacity-90">{title}</h3>
-        
-        <p className="text-light-gray text-opacity-90 leading-relaxed lg:h-32 md:h-24 mb-4">{description}</p>
-        
-        <div className="flex flex-wrap mb-4">
-          {languages.map((language, index) => (
-            <span
-              key={index}
-              className="bg-btn-color hover:bg-btn-hover text-light-gray text-opacity-90 text-sm font-semibold mr-2 mb-2 py-2 px-3 rounded"
-            >
-              {language}
-            </span>
-          ))}
-        </div>
-        
+    <div className="bg-color text-color rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:-translate-y-1 inter">
 
-        <div className="flex justify-between items-center">
+      {/* Project Image */}
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-80 object-cover rounded-2xl mb-4"
+      />
+
+      {/* Title */}
+      <h3 className="text-2xl font-bold mb-3">{title}</h3>
+
+      {/* Description */}
+      <p className="leading-relaxed mb-6 h-28">{description}</p>
+
+      {/* Buttons */}
+      <div className="flex justify-between items-center mt-4 inter">
+        <a
+          href={githubLink}
+            target="_blank"
+  rel="noopener noreferrer"
+          className="flex items-center gap-2 px-4 py-2 rounded-xl bg-color text-color font-semibold shadow hover:bg-gray-200 transition"
+        >
+          <FontAwesomeIcon icon={faGithub} /> GitHub
+        </a>
+
+        {liveDemoLink && (
           <a
-            href={githubLink}
-            className="flex items-center px-4 py-2 rounded-md transition duration-300 ease-in-out bg-gradient-to-r from-gray-900 to-purple-800 text-white font-semibold hover:from-purple-700 hover:to-purple-600 hover:bg-purple-700"
+            href={liveDemoLink}
+              target="_blank"
+  rel="noopener noreferrer"
+            className="px-4 py-2 rounded-xl rev-bg-color rev-text-color font-semibold shadow hover:bg-gray-900 transition"
           >
-            <FontAwesomeIcon icon={faGithub} className="mr-2" />
-            GitHub
+            Live Demo
           </a>
-          
-          {liveDemoLink && (
-            <a
-              href={liveDemoLink}
-              className="inline-block px-4 py-2 rounded-md transition duration-300 ease-in-out bg-purple-900 text-white font-semibold hover:bg-purple-700"
-            >
-              Live Demo
-            </a>
-          )}
-        </div>
+        )}
       </div>
     </div>
   );
-  
-  
-}
+};
 
+// Redesigned Projects List Section
 const ProjectsList = () => {
   const projects = [
     {
-      title: 'ECommerce Web Design',
-      description: 'This E-Commerce Website shows how a pretty design and useful features come together. It proves that when a website looks great and works great, shopping online becomes easy and fun for everyone!',
-      languages: ['HTML', 'CSS', 'JavaScript'],
-      githubLink: 'https://github.com/akwhtun/Ecommerce-web',
-      liveDemoLink: 'https://akwh-ecommerce.netlify.app/',
+      title: 'Niyama Online Exam Proctoring and Anomaly Detection System',
+      description: 'Developed secure RESTful endpoints for exam management and proctoring data.Implemented client- side anomaly tracking(mouse clicks, Ctrl + C / V, tab changes) and a complex backend system for anomaly review and status updates(e.g., "Confirmed Cheating").',
+      image: niyama,
+    githubLink: 'https://github.com/akwhtun/ni-ya-ma-online-exam',
     },
-    {
-      title: 'University Website',
-      description: 'This project presents a visually compelling website design.The design showcases information and details about a computer university, offering an engaging and user-friendly interface.',
-      languages: ['HTML', 'CSS', 'JavaScript'],
-      githubLink: 'https://github.com/akwhtun/University-Of-Computer-Studies',
-      liveDemoLink: 'https://akwh-ucs.netlify.app/',
-    },
-    {
-      title: 'Simple Game',
-      description: 'This game is a simple crescent moon game that children often play.It is just a testing game that mainly uses javascript dom and does not include any special features.',
-      languages: ['HTML', 'CSS', 'JavaScript'],
-      githubLink: 'https://github.com/akwhtun/A-Simple-Game',
-      liveDemoLink: 'https://akwh-simplegame.netlify.app/',
-    },
-    {
-      title: 'React Note App',
-      description: 'This React Note App is a simple powerful tool for creating, managing, and customizing notes. With its intuitive interface and customizable features, managing your notes has never been easier.',
-      languages: ['React', 'CSS'],
-      githubLink: 'https://github.com/akwhtun/react-note-app',
-      liveDemoLink: 'https://akwh-note.netlify.app/',
-    },
-    {
-      title: 'Authentication & Authorization',
-      description: 'This project showcases secure user login and access control using PHP. It demonstrates how users can safely log in, verifying their identity, and how access to specific features or content can be restricted based on user roles or permissions.',
-      languages: ['Bootstrap', 'JQuery', 'PHP', 'MySQL'],
-      githubLink: 'https://github.com/akwhtun/User-Authentication',
-    },
-    {
-      title: 'Order Lists Note',
-      description: 'This project enables efficient order organization through note-taking for customer names, ordered product names, order quantities, and address of customer. With search capabilities and the ability to highlight important orders, it simplifies order management tasks effectively.',
-      languages: ['HTML', 'CSS', 'JQuery', 'PHP', 'MySQL'],
-      githubLink: 'https://github.com/akwhtun/Order-List-Note',
-    },
-    {
-      title: 'POS Web App',
-      description: 'This web application is a responsive POS (Point of Sale) online website. The system is designed to support both admin and user functionalities.',
-      languages: ['Bootstrap', 'JQuery', 'Laravel', 'MySQL'],
-      githubLink: 'https://github.com/akwhtun/POS-Online-Website',
-    },
-    {
-      title: 'EBook Web App',
-      description: 'This Online EBook Store provides a responsive interface for exploring and downloading books.The system is designed to support both admin and user functionalities.',
-      languages: ['Bootstrap', 'JQuery', 'Laravel', 'MySQL'],
-      githubLink: 'https://github.com/akwhtun/Ebook',
-    },
-    {
-      title: 'Amono Online Shop',
-      description: 'Amono Online Shop is a fully-functional e-commerce web application. This platform offers a secure and robust solution for online shopping..The system is designed to support for admin, business owner and user functionalities.',
-      languages: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'JQuery', 'Java(JSP, Servlets)', 'MySQL' ],
-      githubLink: 'https://github.com/akwhtun/Online-Shop',
-    },
+  {
+    title: 'Computer University Course Registration System',
+    description:
+        'Built a custom solution to manage student course registration and grades throughout the semester.',
+    image: crsfcu,
+    githubLink: 'https://github.com/akwhtun/course_registration_system',
+  },
+  {
+    title: 'Amono Online Shop',
+    description:
+        ' Developed a fully functional e-commerce platform with distinct user roles (Admin, Business Owner, Customer, Guest). Implemented a complex approval workflow for product posts and managed order history/account suspensions.',
+        image: amono,
+    githubLink: 'https://github.com/akwhtun/Online-Shop',
+  },
+  {
+    title: 'Ebook Web App',
+    description:
+        'Built a responsive platform to explore, download, and manage eBooks with admin controls for users, content, and interactions.',
+    image: ebook,
+    githubLink: 'https://github.com/akwhtun/Ebook',
+  },
+  {
+    title: 'Order System',
+    description:
+    'Built a simple and user-friendly food ordering app for university students to quickly order meals, making events like university welcome day stress-free and enjoyable',
+    image: order,
+    githubLink: 'https://github.com/akwhtun/practical_order_system',
+    liveDemoLink: 'https://foodify2.vercel.app/',
+  },
+  {
+    title: 'Blog Web App',
+    description:
+    'Built a responsive, mobile-optimized blog platform to share heartfelt stories, emotions, and experiences through a series of articles.',
+    image: blog,
+    githubLink: 'https://github.com/akwhtun/my_blog',
+    liveDemoLink: 'https://akwh-blog.vercel.app/',
+  },
   ];
 
-  return (
-    <div id="projects">
-    <p className="line text-3xl text-light-gray text-opacity-90 font-ubuntu">My Projects</p>
-    <div className="grid grid-cols-1 gap-y-4 xl:px-28 sm:px-10 px-4 py-10">
-      <div className="grid gap-6 lg:grid-cols-2 grid-col-1">
-        {projects.map((project, index) => (
-         <Project key={index} {...project} />
-        ))}
-      </div>
+return (
+  <div id="projects" className="px-6 sm:px-10 xl:px-28 py-20 bg-color text-color">
+    <h2 className="text-4xl poppins-regular font-bold text-color mb-10 text-center">My Projects</h2>
+
+    <div className="grid grid-cols-1 bg-color text-color lg:grid-cols-2 gap-8">
+      {projects.map((project, index) => (
+        <Project key={index} {...project} />
+      ))}
     </div>
-    </div>
-  );
+  </div>
+);
 };
 
 export default ProjectsList;

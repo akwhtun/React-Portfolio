@@ -27,7 +27,7 @@ const Arrow = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`button-e fixed bottom-10 right-10 bg-btn-color hover:bg-btn-hover text-white text-3xl p-4 
+      className={`button-e fixed bottom-10 right-10 rev-bg-color hover:bg-gray-900 rev-text-color text-3xl p-4 
       rounded-full shadow-lg focus:outline-none transition duration-300 
       ${
         showButton ? 'showButton' : ''

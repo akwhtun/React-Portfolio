@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import About from "./components/About";
 import SkillsList from "./components/SkillsList";
 import ProjectsList from "./components/ProjectsList";
 import Contact from "./components/Contact";
@@ -10,17 +9,16 @@ import Footer from "./components/Footer";
 import Arrow from "./components/Arrow";
 
 const App = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 2000);
   }, []);
 
   return (
-    <div className="font-nunito font-extrabold leading-normal tracking-normal app">
+    <div className="font-extrabold leading-normal tracking-normal app">
       {loading ? (
         <div className="load">
           <div className="loader">
@@ -28,13 +26,19 @@ const App = () => {
             <div className="inner two"></div>
             <div className="inner three"></div>
           </div>
-          <div className="text-container"></div>
+
+          <div className="loading-text plus-jakarta-sans">
+            <span>A</span>
+            <span>K</span>
+            <span>W</span>
+            <span>H</span>
+          </div>
         </div>
+
       ) : (
         <>
           <Navbar />
           <Home />
-          <About />
           <SkillsList />
           <ProjectsList />
           <Contact />

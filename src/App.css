@@ -1,37 +1,69 @@
 /* tailwind.css */
 @import './tailwind.css';
+*:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 
 /* Other global styles */
 ::-webkit-scrollbar {
   width: 12px;
 }
 
+
 ::-webkit-scrollbar-track {
-  background: #282a36;
+  background: #ECF0F7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2a0a2d;
+  background: #2E2E2E;
   border-radius: 6px;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #2a0a2d #282a36;
+  scrollbar-color: #ECF0F7 #282a36;
 }
 
-
-body {
-  background: linear-gradient(135deg, #282a36, #44475a, #401044, #1e1f29, #403b4f);
+.bg-color{
+   background-color:#ECF0F7;
+}
+.text-color{
+    color : #2E2E2E;
+}
+.rev-bg-color{
+  background-color : #2E2E2E;
 }
 
+.rev-text-color{
+  color:#ECF0F7;
+}
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 .load {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: #282a36;
+  background-color: #ECF0F7;
+  color:#2E2E2E;
 }
 
 #contact {
@@ -44,14 +76,16 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background: #1e1f2977;
+  background: #2E2E2E;
+  color:#ECF0F7;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .active {
-  background-color: #2a0a2d;
+  background: #2E2E2E;
+  color:#ECF0F7;
 }
 
 .icon-large {
@@ -72,7 +106,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   height: 3px;
-  background-color: black;
+  background-color: #2E2E2E;
 }
 
 .line::before {
@@ -92,8 +126,8 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  color: #d4d2d2;
-  border-right: 2px solid #d4d2d2;
+  color: #2E2E2E;
+  border-right: 2px solid #2E2E2E;
   white-space: nowrap;
   overflow: hidden;
   animation: animatedText 4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 15s infinite alternate forwards;
@@ -113,7 +147,7 @@ body {
   content: "";
   width: 150px;
   height: 2px;
-  background-color: snow;
+  background-color: #ECF0F7;
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -144,6 +178,8 @@ body {
 }
 
 /* loading */
+
+/* ===== Loader Animation (Yours) ===== */
 .loader {
   position: relative;
   width: 64px;
@@ -163,89 +199,76 @@ body {
   left: 0%;
   top: 0%;
   animation: rotate-one 1s linear infinite;
-  border-bottom: 3px solid #EFEFFA;
+  border-bottom: 3px solid #2E2E2E;
 }
 
 .inner.two {
   right: 0%;
   top: 0%;
   animation: rotate-two 1s linear infinite;
-  border-right: 3px solid #EFEFFA;
+  border-right: 3px solid #2E2E2E;
 }
 
 .inner.three {
   right: 0%;
   bottom: 0%;
   animation: rotate-three 1s linear infinite;
-  border-top: 3px solid #EFEFFA;
+  border-top: 3px solid #2E2E2E;
 }
 
 @keyframes rotate-one {
-  0% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
-  }
-
-  100% {
-    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
-  }
+  0% { transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg); }
+  100% { transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg); }
 }
 
 @keyframes rotate-two {
-  0% {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
-  }
-
-  100% {
-    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
-  }
+  0% { transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg); }
+  100% { transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg); }
 }
 
 @keyframes rotate-three {
-  0% {
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
-  }
-
-  100% {
-    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
-  }
+  0% { transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg); }
+  100% { transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg); }
 }
-.loader{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+/* Perfect center (for whole loader + text) */
+.load {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.text-container {
-  width: 100%;
-  height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* ===== Animated Text (letter-by-letter) ===== */
+.loading-text {
   position: absolute;
-  top: 50%;
+   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: fit-content;
-  font-weight: bolder;
-  font-family: poppins;
-  font-size: 30px;
-  letter-spacing: 2px;
-  color: #0000;
-  background: linear-gradient(90deg, #EFEFFA calc(50% + 0.5ch), #000 0) right/calc(200% + 1ch) 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: l7 2s infinite steps(11);
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 10px;
+
 }
 
-.text-container:before {
-  content: "AKWH";
+/* Start white → turn black */
+.loading-text span {
+  color: white;
+  animation: fadeToBlack 1.2s forwards;
+  opacity: 0.2;
 }
 
-@keyframes l7 {
-  to {
-    background-position: left
-  }
+/* Stagger each letter to animate one after another */
+.loading-text span:nth-child(1) { animation-delay: 0.2s; }
+.loading-text span:nth-child(2) { animation-delay: 0.4s; }
+.loading-text span:nth-child(3) { animation-delay: 0.6s; }
+.loading-text span:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeToBlack {
+  0% { color: white; opacity: 0.3; }
+  100% { color: black; opacity: 1; }
 }
