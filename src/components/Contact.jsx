@@ -12,7 +12,7 @@ export default function Contact() {
       <div className="flex flex-col md:flex-row inter py-5 justify-center gap-6 px-6">
         {/* PHONE */}
         <a
-          href="tel:+959881971360"
+          href="tel:+959891082064"
           className="flex items-center gap-4 bg-color shadow-md hover:shadow-xl transition rounded-xl p-5 border border-gray-200 hover:-translate-y-1"
         >
           <div className="text-3xl text-color">
@@ -63,7 +63,7 @@ export default function Contact() {
         </a>
       </div>
         <div className="flex justify-center mt-20 py-5">
-        <p className="text-2xl text-white text-opacity-0 relative plus-jakarta-sans scrolling">
+        <p className="text-2xl text-white text-opacity-0 relative plus-jakarta-sans scrolling text-center">
           Thanks for Scrolling.
         </p>
       </div>
