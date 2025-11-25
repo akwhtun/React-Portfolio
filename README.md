@@ -8,10 +8,6 @@ The Portfolio Project serves as a showcase of my skills, projects, and ways to g
 
 ## Sections
 
-### About
-
-The About section offers insights into my background, education, and professional journey. It presents a brief bio and highlights key experiences.
-
 ### Skills
 
 The Skills section showcases my technical skills and proficiencies. It lists programming languages, tools, frameworks, and any other relevant skills.

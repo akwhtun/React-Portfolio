@@ -6,7 +6,7 @@ import { faFacebook, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-i
 export default function Contact() {
   return (
     <div id="contact" className="py-20 bg-color text-color">
-      <h2 className="text-4xl font-bold poppins-regular text-center mb-12">Contact Me</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold poppins-regular text-center mb-12">Contact Me</h2>
 
       {/* CONTACT CARDS */}
       <div className="flex flex-col md:flex-row inter py-5 justify-center gap-6 px-6">

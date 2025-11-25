@@ -26,7 +26,7 @@ export default function Skills() {
       id="skills"
       className="px-6 md:px-20 py-20 text-color bg-color w-full max-w-screen-xl mx-auto"
     >
-      <h2 className="text-4xl font-extrabold poppins-regular text-center mb-12">
+      <h2 className="text-3xl sm:text-4xl font-extrabold poppins-regular text-center mb-12">
         My Skills
       </h2>
 

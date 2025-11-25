@@ -19,8 +19,8 @@ export default function Home() {
       className="min-h-screen flex flex-col md:flex-row items-center justify-between text-color bg-color px-6 sm:px-10 md:px-16 py-16 md:py-24 gap-16 md:gap-0"
     >
       {/* LEFT CONTENT */}
-      <div className="md:w-3/5 w-full flex flex-col justify-center items-start text-center md:text-left">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold plus-jakarta-sans text-color leading-tight">
+      <div className="md:w-3/5 w-full flex flex-col justify-center items-start text-center md:text-left sm:mt-0 mt-8">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold plus-jakarta-sans text-color leading-tight">
           Aung Kyaw Wai Htun
         </h1>
 
